@@ -1,0 +1,12 @@
+<h1>Product Page</h1>
+{{ queryset }}
+
+<form method="POST"> 
+    {% csrf_token %}
+    <input type="text" placeholder="search here..." name="search" />
+    <button type="submit"> search </button>
+</form>
+
+{% for q in queryset %}
+    {{q.name}}
+{% endfor %}
